@@ -557,3 +557,42 @@ transform: translate(-50%, -100%), scale(1.5);
 }
 
 
+.modal-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    border: none;
+    background-color: transparent;
+    color: #111111;
+    border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn:hover,
+.modal-btn:focus{
+color:#2E2F42;
+}
+
+.modal-form-icon {
+color: currentColor;
+}
+
+.modal-caption {}
+
+.modal-form {}
+
+.modal-form-field {}
+
+.modal-form-label {}
+
+.modal-form-wraper {}
+
+.modal-form-input {}
