@@ -599,17 +599,15 @@
         <div class="subscribe-form">
           <p class="subscribe-form-caption">Subscribe</p>
           <form class="footer-form" name="subscribe-form">
-            <label for="subscribe-email" class="visually-hidden">
-              User name
+            <label for="subscribe-email" class="footer-form-field">
+              <input
+                class="footer-form-input"
+                type="email"
+                name="subscribe-email"
+                id="subscribe-email"
+                placeholder="E-mail"
+              />
             </label>
-            <input
-              class="footer-form-input"
-              type="email"
-              name="subscribe-email"
-              id="subscribe-email"
-              placeholder="E-mail"
-            />
-
             <button type="submit" class="footer-form-btn btn-accent">
               Subscribe
               <svg class="btn-icon" width="24" height="24">
@@ -642,7 +640,8 @@
               <input
                 class="modal-form-input"
                 type="text"
-                id="user_name"
+                id="user-name"
+                name="user-name"
                 required
                 pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
                 title="Username must included two words separated by space"
@@ -700,14 +699,14 @@
             <input
               class="checkbox visually-hidden"
               type="checkbox"
-              id="user-agreement"
-              name="user-agreement"
+              id="user-privacy"
+              name="user-privacy"
               value="true"
               checked
             />
-            <label class="agreement-wrapper" for="user-agreement">
+            <label class="agreement-wrapper" for="user-privacy">
               <span class="agreement-checkbox">
-                <svg class="agreement-checkbox-icon" width="16" height="16">
+                <svg class="agreement-checkbox-icon" width="10" height="8">
                   <use href="./images/icons.svg#checkmark"></use>
                 </svg>
               </span>
