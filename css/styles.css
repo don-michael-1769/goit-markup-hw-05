@@ -7,6 +7,12 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+
+/* Block page scroll */
+body:has(.backdrop.is-open) {
+    overflow: hidden;
+}
+
 /* Reset start */
 h1,
 h2,
@@ -141,7 +147,7 @@ button{
     }
 
 
-/* hero */
+/* Hero */
 .hero{
         max-width: 1440px;
         height: 600px;
@@ -213,7 +219,6 @@ padding: 120px 0;
     align-items: center;
     justify-content: center;
     gap: 24px;
-    /* padding: 120px 0; */
 }
 
 .features-item{
@@ -249,7 +254,7 @@ padding: 120px 0;
         color:#434455;
 }
 
-/* team */
+/* Team */
 .team{
 background-color: #F4F4FD;
 padding: 120px 0 120px;
@@ -339,7 +344,7 @@ background-color: #404bbf;
     fill: #f4f4fd;
 }
 
-/* portfolio */
+/* Portfolio */
 .portfolio{
 padding: 120px 0;
 }
@@ -529,6 +534,7 @@ background-color: #31d0aa;
     border: 1px solid rgba(255, 255, 255, 1);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     background-color: transparent;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-form-input::placeholder {
@@ -539,7 +545,7 @@ background-color: #31d0aa;
 }
 
 .footer-form-input:focus{
-    border-color: rgba(77, 90, 229, 1);
+    border: 1px solid rgba(49, 208, 170, 1);
 }
 
 .footer-form-btn{
@@ -551,6 +557,12 @@ background-color: #31d0aa;
 
     border-radius: 4px;
     background-color: rgba(77, 90, 229, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-btn:hover,
+.footer-form-btn:focus{
+background-color: rgba(49, 208, 170, 1);
 }
 
 
@@ -632,20 +644,23 @@ transition-delay: 0ms;
     justify-content: center;
    
     padding: 0;   
-    border: none;
-    background-color: transparent;
-    fill: #111111;
-    border-radius: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: rgba(46, 47, 66, 1);
+    background-color: rgba(231, 233, 252, 1);
+    
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover,
 .modal-btn:focus{
-fill:#2E2F42;
+fill:rgba(255, 255, 255, 1);
+background-color: rgba(64, 75, 191, 1);
 }
 
-.modal-form-icon {
-color: currentColor;
+.modal-btn-icon {
+/* fill: currentColor; */
 }
 
 .modal-caption {
@@ -670,7 +685,12 @@ color: currentColor;
 .modal-form-label {
     display: flex;
     margin-bottom:4px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 4%;
+    color: rgba(142, 143, 153, 1);
 }
+
 
 .modal-form-wraper {
     position: relative;
@@ -693,13 +713,18 @@ color: currentColor;
     border-color: rgba(77, 90, 229, 1);
 }
 
+.modal-form-input:user-invalid:required {
+    border-color: rgba(231, 74, 59, 1);
+}
+
+
 .modal-form-icon{
     position: absolute;
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    stroke: #111111;
+    fill: rgb(17, 17, 17);
     pointer-events: none;
 }
 
@@ -731,4 +756,57 @@ border-color: rgba(77, 90, 229, 1);
 
 .modal-form-message::placeholder{
 color: rgba(117, 117, 117, 0.5);;
+}
+
+/* Custom Checkbox */
+.form-agreement {
+    margin-bottom: 24px;
+}
+
+.checkbox {}
+
+.visually-hidden {}
+
+.agreement-wrapper {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -0.02em;
+    color: rgba(64, 64, 64, 0.6);
+}
+
+
+.agreement-checkbox {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+
+}
+
+input[type='checkbox']:checked+.agreement-wrapper>.agreement-checkbox {
+    background-color: rgba(64, 75, 191, 1);
+    border-color: rgba(64, 75, 191, 1);
+    color: rgba(244, 244, 253, 1);
+}
+.agreement-checkbox-icon {}
+
+.agreement-link {
+    letter-spacing: 4%;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: 0%;
+    color: rgba(117, 117, 117, 1);
+}
+
+.accent-text {
+    color: rgba(77, 90, 229, 1);
 }
