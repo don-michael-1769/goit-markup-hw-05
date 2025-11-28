@@ -832,7 +832,9 @@ input[type="checkbox"]:checked+.agreement-wrapper>.agreement-checkbox {
     fill: rgb(244, 244, 253);
 }
 
-.agreement-checkbox-icon {}
+.agreement-checkbox-icon {
+    /* fill: currentColor; */
+}
 
 .agreement-link {
     letter-spacing: 4%;
