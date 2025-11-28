@@ -824,7 +824,7 @@ color: rgba(117, 117, 117, 0.5);;
     cursor: pointer;
 }
 
-input[type='checkbox']:checked+.agreement-wrapper>.agreement-checkbox {
+.visually-hidden:checked+.agreement-wrapper>.agreement-checkbox {
     background-color: rgb(64, 75, 191);
     border: none;
     fill: rgb(244, 244, 253);
