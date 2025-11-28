@@ -508,9 +508,9 @@ background-color: #31d0aa;
 }
 
 /* Subscribe-form */
-.subscribe-form{
+.subscribe-form{}
 
-}
+
 .subscribe-form-caption{
     font-weight: 500;
     font-size: 16px;
@@ -656,8 +656,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-delay: 0ms;
 }
 
-.modal-form {   
-}
+.modal-form {}
 
 
 .modal-btn {
@@ -825,7 +824,7 @@ color: rgba(117, 117, 117, 0.5);;
     cursor: pointer;
 }
 
-.checkbox.visually-hidden:checked+.agreement-wrapper .agreement-checkbox {
+input[type='checkbox']:checked+.agreement-wrapper>.agreement-checkbox {
     background-color: rgb(64, 75, 191);
     border: none;
     fill: rgb(244, 244, 253);
